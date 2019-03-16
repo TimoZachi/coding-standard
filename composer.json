@@ -1,0 +1,36 @@
+{
+    "name": "tzachi/coding-standard",
+    "type": "phpcodesniffer-standard",
+    "description": "Coding Standard for TZachi's projects",
+    "keywords": [
+        "coding",
+        "standard",
+        "cs",
+        "code",
+        "style",
+        "rules",
+        "checks"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Timóteo Zachi",
+            "email": "zachi.timo@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "doctrine/coding-standard": "^5.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

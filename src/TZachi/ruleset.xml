@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<ruleset
+    name="TZachi"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../vendor/squizlabs/php_codesniffer/phpcs.xsd"
+>
+    <description>TZachi Coding Standard</description>
+
+    <!-- Include Doctrine Coding Standard, exclude a few rules -->
+    <rule ref="Doctrine">
+        <exclude name="SlevomatCodingStandard.Commenting.RequireOneLinePropertyDocComment" />
+        <exclude name="SlevomatCodingStandard.Functions.StaticClosure.ClosureNotStatic" />
+    </rule>
+
+    <!-- Force multiline property doc comment -->
+    <rule ref="SlevomatCodingStandard.Commenting.DisallowOneLinePropertyDocComment" />
+
+    <!-- Force camel case variable/property name -->
+    <rule ref="Squiz.NamingConventions.ValidVariableName" />
+
+    <!-- A bit more strictness on inline comments -->
+    <rule ref="Squiz.Commenting.InlineComment">
+        <exclude name="Squiz.Commenting.InlineComment.DocBlock" />
+        <exclude name="Squiz.Commenting.InlineComment.SpacingAfter" />
+    </rule>
+
+    <!-- Empty catch must have a comment explaining why -->
+    <rule ref="Squiz.Commenting.EmptyCatchComment"/>
+
+    <!-- No spaces after the negation operator -->
+    <rule ref="Generic.Formatting.SpaceAfterNot">
+        <properties>
+            <property name="spacing" value="0" />
+        </properties>
+    </rule>
+
+    <!-- No spaces before colon in return type -->
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing">
+        <properties>
+            <property name="spacesCountBeforeColon" value="0" />
+        </properties>
+    </rule>
+
+    <!-- Redefine annotation groups -->
+    <rule ref="SlevomatCodingStandard.Commenting.DocCommentSpacing">
+        <properties>
+            <property name="annotationsGroups" type="array">
+                <element value="@internal, @deprecated" />
+                <element value="@link, @see" />
+                <element value="@test, @group, @depends, @dataProvider, @runInSeparateProcess" />
+                <element value="@expectedDeprecation, @expectedException, @expectedExceptionCode, @expectedExceptionMessage, @expectedExceptionMessageRegExp" />
+                <element value="@uses" />
+                <element value="@covers, @coversNothing"/>
+                <element value="@ORM\,@ODM\," />
+                <element value="@param" />
+                <element value="@return" />
+                <element value="@throws" />
+            </property>
+        </properties>
+    </rule>
+</ruleset>

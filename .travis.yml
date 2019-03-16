@@ -1,0 +1,35 @@
+dist: xenial
+sudo: false
+language: php
+
+php:
+  - 7.1
+  - 7.2
+  - 7.3
+  - nightly
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+before_install:
+  - mv ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini{,.disabled} || echo "xdebug not available"
+  - composer self-update
+
+install: travis_retry composer install
+
+script:
+  - vendor/bin/phpcs $(find tests/files/* | sort) --report=summary --report-file=phpcs.log; diff tests/expected_report.txt phpcs.log
+
+jobs:
+  allow_failures:
+    - php: nightly
+
+  include:
+    - stage: Validate against schema
+      addons:
+        apt:
+          packages:
+            - libxml2-utils
+      script:
+        - xmllint --noout --schema vendor/squizlabs/php_codesniffer/phpcs.xsd src/TZachi/ruleset.xml
