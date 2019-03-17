@@ -6,7 +6,6 @@ php:
   - 7.1
   - 7.2
   - 7.3
-  - nightly
 
 cache:
   directories:
@@ -21,10 +20,11 @@ install: travis_retry composer install
 script:
   - vendor/bin/phpcs $(find tests/files/* | sort) --report=summary --report-file=phpcs.log; diff tests/expected_report.txt phpcs.log
 
-jobs:
-  allow_failures:
-    - php: nightly
+stages:
+  - Validate against schema
+  - Test
 
+jobs:
   include:
     - stage: Validate against schema
       addons:
