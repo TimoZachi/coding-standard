@@ -16,7 +16,10 @@
     <rule ref="SlevomatCodingStandard.Commenting.DisallowOneLinePropertyDocComment" />
 
     <!-- Force camel case variable/property name -->
-    <rule ref="Squiz.NamingConventions.ValidVariableName" />
+    <rule ref="Squiz.NamingConventions.ValidVariableName">
+        <!-- Private variables shouldn't start with an underscore -->
+        <exclude name="Squiz.NamingConventions.ValidVariableName.PrivateNoUnderscore" />
+    </rule>
 
     <!-- A bit more strictness on inline comments -->
     <rule ref="Squiz.Commenting.InlineComment">
