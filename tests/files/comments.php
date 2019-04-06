@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-//This comment should have a space after the //.
+//This comment should have a space after the //
 
-// This comment should end with a dot
+// This comment is allowed
 
 /*
- * This comment is allowed
+ * This comment is also allowed
  */
 
 /**

@@ -23,6 +23,7 @@
 
     <!-- A bit more strictness on inline comments -->
     <rule ref="Squiz.Commenting.InlineComment">
+        <exclude name="Squiz.Commenting.InlineComment.InvalidEndChar" />
         <exclude name="Squiz.Commenting.InlineComment.DocBlock" />
         <exclude name="Squiz.Commenting.InlineComment.SpacingAfter" />
     </rule>
