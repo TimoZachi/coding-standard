@@ -29,7 +29,7 @@
     </rule>
 
     <!-- Empty catch must have a comment explaining why -->
-    <rule ref="Squiz.Commenting.EmptyCatchComment"/>
+    <rule ref="Squiz.Commenting.EmptyCatchComment" />
 
     <!-- No spaces after the negation operator -->
     <rule ref="Generic.Formatting.SpaceAfterNot">

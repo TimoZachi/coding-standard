@@ -1,8 +1,9 @@
 # Coding Standard
 
+[![License](https://img.shields.io/packagist/l/tzachi/coding-standard.svg)](https://packagist.org/packages/tzachi/coding-standard)
 [![Build Status](https://travis-ci.org/TimoZachi/coding-standard.svg?branch=master)](https://travis-ci.org/TimoZachi/coding-standard)
-[![Total Downloads](https://img.shields.io/packagist/dt/tzachi/coding-standard.svg)](ttps://packagist.org/packages/tzachi/coding-standard)
-[![Stable Version](https://img.shields.io/packagist/v/tzachi/coding-standard.svg?label=stable)](https://packagist.org/packages/tzachi/coding-standard)
+[![Total Downloads](https://img.shields.io/packagist/dt/tzachi/coding-standard.svg)](https://packagist.org/packages/tzachi/coding-standard)
+[![Latest Stable Version](https://img.shields.io/packagist/v/tzachi/coding-standard.svg?color=blue&label=stable)](https://packagist.org/packages/tzachi/coding-standard)
 [![Unstable Version](https://img.shields.io/packagist/vpre/tzachi/coding-standard.svg?label=unstable)](https://packagist.org/packages/tzachi/coding-standard)
 
 This project has a set of [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) rules that are based on
