@@ -10,6 +10,7 @@
     <rule ref="Doctrine">
         <exclude name="SlevomatCodingStandard.Commenting.RequireOneLinePropertyDocComment" />
         <exclude name="SlevomatCodingStandard.Functions.StaticClosure.ClosureNotStatic" />
+        <exclude name="Squiz.Commenting.FunctionComment.ThrowsNoFullStop" />
     </rule>
 
     <!-- Force multiline property doc comment -->

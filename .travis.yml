@@ -3,22 +3,21 @@ sudo: false
 language: php
 
 php:
-  - 7.1
-  - 7.2
-  - 7.3
+  - '7.1'
+  - '7.2'
+  - '7.3'
 
 cache:
   directories:
     - $HOME/.composer/cache
 
 before_install:
-  - mv ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini{,.disabled} || echo "xdebug not available"
   - composer self-update
 
 install: travis_retry composer install
 
 script:
-  - vendor/bin/phpcs $(find tests/files/* | sort) --report=summary --report-file=phpcs.log; diff tests/expected_report.txt phpcs.log
+  - ./vendor/bin/phpcs $(find tests/files/* | sort) --report=summary --report-file=phpcs.log; diff tests/expected_report.txt phpcs.log
 
 stages:
   - Validate against schema

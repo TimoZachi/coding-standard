@@ -5,12 +5,14 @@ FILE                                                  ERRORS  WARNINGS
 ----------------------------------------------------------------------
 tests/files/comments.php                              1       0
 tests/files/empty-catch.php                           1       0
+tests/files/no-space-after-negation.php               1       0
+tests/files/NoSpaceBeforeColon.php                    1       0
 tests/files/PropertyDocComment.php                    1       0
 tests/files/variable-names.php                        4       2
 ----------------------------------------------------------------------
-A TOTAL OF 7 ERRORS AND 2 WARNINGS WERE FOUND IN 4 FILES
+A TOTAL OF 9 ERRORS AND 2 WARNINGS WERE FOUND IN 6 FILES
 ----------------------------------------------------------------------
-PHPCBF CAN FIX 2 OF THESE SNIFF VIOLATIONS AUTOMATICALLY
+PHPCBF CAN FIX 4 OF THESE SNIFF VIOLATIONS AUTOMATICALLY
 ----------------------------------------------------------------------
 
 

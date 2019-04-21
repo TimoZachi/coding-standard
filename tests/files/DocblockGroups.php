@@ -30,7 +30,7 @@ class DocblockGroups
      *
      * @return mixed
      *
-     * @throws InvalidArgumentException When argument is invalid.
+     * @throws InvalidArgumentException When argument is invalid
      */
     public function annotationsTest($banana)
     {
